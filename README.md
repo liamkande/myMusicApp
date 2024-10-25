@@ -12,6 +12,8 @@ Features
 
 Directory Structure
 
+The project structure is organized into different directories for better separation of concerns and modularity. Here's a brief overview of the main directories:
+
 src/
 ├── components/          # Reusable UI components like buttons, sliders, etc.
 ├── screens/             # Major screens like Home, Library, Search, etc.
@@ -20,15 +22,16 @@ src/
 ├── assets/              # Fonts, icons, images, etc.
 ├── utils/               # Utility functions and helpers
 ├── graphql/             # GraphQL setup
-│   ├── schema/          # Local GraphQL schemas
+│   ├── schema/          # Define local GraphQL schemas (if using local schema stitching)
 │   ├── queries.tsx       # GraphQL queries
 │   ├── mutations.tsx     # GraphQL mutations
 │   ├── ApolloClient.tsx  # Apollo client configuration
 ├── firebase/            # Firebase configuration and functions
 │   ├── config.tsx        # Firebase initialization and config
-│   ├── auth.tsx          # Firebase authentication helper functions
-│   ├── firestore/       # Firestore-specific queries and helper functions
-└── hooks/               # Custom React hooks for app logic
+│   ├── auth.tsx         # Firebase authentication helper functions
+│   ├── firestore/       # Optional: Firestore-specific queries and helper functions
+│   └── functions/       # Firebase Cloud Functions setup (optional for testing locally)
+└── hooks/               # Custom React hooks for specific app logic
 ├── useAuth.tsx       # Authentication-related hooks
 ├── useTrackPlayer.tsx # Custom hook for audio player controls and state
 
